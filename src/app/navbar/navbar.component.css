@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.banner {
+    height: 80vh;
+    width: 100%;
+    background: url('../../assets/banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
