@@ -1,2 +1,8 @@
 <app-navbar></app-navbar>
 <app-overview></app-overview>
+<ul>
+    <li *ngFor = "let city of cities">
+    {{city}}
+    </li>
+</ul>
+<pre>{{cities | json}}</pre>
