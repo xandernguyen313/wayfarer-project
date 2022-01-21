@@ -1,0 +1,9 @@
+<h2> Top attractions in {{city.name}}</h2>
+
+<ul *ngFor="let post of city.posts">
+
+    <li>{{post.title}}</li>
+
+    <li>{{post.description}}</li>
+    <img src="{{post.img}}" alt="">
+</ul>
