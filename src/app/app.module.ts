@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OverviewComponent } from './overview/overview.component';
+import { CitiesComponent } from './cities/cities.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     NavbarComponent,
-    OverviewComponent
+    OverviewComponent,
+    CitiesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

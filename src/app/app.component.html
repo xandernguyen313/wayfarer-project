@@ -1,44 +1,12 @@
 <app-navbar></app-navbar>
 <app-overview></app-overview>
-<input [(ngModel)]="city">
-<ul *ngIf = "city === 'london'">
-    <li *ngFor = "let post of london">
-       
-       {{post.img}} 
-  
-  
+
+<ul *ngFor="let city of cities">
+    <li>
+        <a routerLink="/cities/{{city.id}}">{{city.name}}</a>
     </li>
 </ul>
-<ul *ngIf = "city === 'sydney'">
-    <li *ngFor = "let post of sydney">
-       
-       {{post.title}} 
-  
-  
-    </li>
-</ul>
-<ul *ngIf = "city === 'san francisco'">
-    <li *ngFor = "let post of san_francisco">
-       
-       {{post.title}} 
-  
-  
-    </li>
-</ul>
-<ul *ngIf = "city === 'seattle'">
-    <li *ngFor = "let post of seattle">
-       
-       {{post.description}} 
-  
-  
-    </li>
-</ul>
-<ul *ngIf = "city === 'gibraltar'">
-    <li *ngFor = "let post of gibraltar">
-       
-       {{post.title}} 
-  
-  
-    </li>
-</ul>
+
+
+<router-outlet></router-outlet>
 
