@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CITIES } from './cities';
+import { LONDON, SYDNEY, SAN_FRANCISCO, GIBRALTAR, SEATTLE } from './cities';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,12 @@ import { CITIES } from './cities';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- cities = CITIES;
+
+london = LONDON;
+sydney = SYDNEY;
+san_francisco = SAN_FRANCISCO;
+gibraltar = GIBRALTAR;
+seattle = SEATTLE;
+city: string = '';
 }
+
