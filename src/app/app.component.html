@@ -1,8 +1,44 @@
 <app-navbar></app-navbar>
 <app-overview></app-overview>
-<ul>
-    <li *ngFor = "let city of cities">
-    {{city}}
+<input [(ngModel)]="city">
+<ul *ngIf = "city === 'london'">
+    <li *ngFor = "let post of london">
+       
+       {{post.img}} 
+  
+  
     </li>
 </ul>
-<pre>{{cities | json}}</pre>
+<ul *ngIf = "city === 'sydney'">
+    <li *ngFor = "let post of sydney">
+       
+       {{post.title}} 
+  
+  
+    </li>
+</ul>
+<ul *ngIf = "city === 'san francisco'">
+    <li *ngFor = "let post of san_francisco">
+       
+       {{post.title}} 
+  
+  
+    </li>
+</ul>
+<ul *ngIf = "city === 'seattle'">
+    <li *ngFor = "let post of seattle">
+       
+       {{post.description}} 
+  
+  
+    </li>
+</ul>
+<ul *ngIf = "city === 'gibraltar'">
+    <li *ngFor = "let post of gibraltar">
+       
+       {{post.title}} 
+  
+  
+    </li>
+</ul>
+
