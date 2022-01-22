@@ -1,9 +1,13 @@
-<h2> Top attractions in {{city.name}}</h2>
 
-<ul *ngFor="let post of city.posts">
+<div class="boxing">  
+  <h2>Welcome to {{city.name}}</h2>
+<div *ngFor="let post of city.posts" class="card" style="width: 18rem;">
 
-    <li>{{post.title}}</li>
-
-    <li>{{post.description}}</li>
-    <img src="{{post.img}}" alt="">
-</ul>
+  <img src="{{post.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.description}}</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</div>
