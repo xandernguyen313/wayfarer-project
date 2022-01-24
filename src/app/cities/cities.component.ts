@@ -1,5 +1,6 @@
+import { state } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { CITIES } from '../cities';
 
 
@@ -13,7 +14,7 @@ export class CitiesComponent implements OnInit {
   cityIndex: string = '';
   searchText: string = '';
 // let's make the URL routes available to class 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -38,5 +39,8 @@ export class CitiesComponent implements OnInit {
     })
   }
 
+  redirectToPost(currentPost: any){
+    this.router.navigate(['post'], {state: {currentPost: currentPost}});
+  }
 }
 
