@@ -10,6 +10,7 @@ import { CitiesComponent } from './cities/cities.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './search/search.component';
 import { WeatherComponent } from './weather/weather.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { WeatherComponent } from './weather/weather.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
