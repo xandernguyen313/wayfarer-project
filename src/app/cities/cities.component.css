@@ -3,6 +3,7 @@ img {
     height: 500px;
     object-fit: cover;
 }
+
 .card {
     background-color: #ffffff;
     border-radius: 50px;
@@ -41,4 +42,9 @@ img {
 #weather-icon img{
     width: 100px;
     height: 100px; 
+
+
+.form-control {
+    width: 1000px;
+
 }
