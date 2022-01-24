@@ -1,0 +1,12 @@
+<section>
+    <h2>What's is the Weather where you are at?</h2>
+    <input [(ngModel)]="zip" type="text" placeholder="your Zip Code" (keyup)="findWeather(zip)"/>
+    <input (click)="findWeather(zip)" type="submit" value="Search" />
+</section>
+<section *ngIf="findWeather">
+<h3>Here's is the weather in {{weather.name}}:</h3>
+<p>Currently {{weather.weather[0].description}}</p>
+<p>There's a high of {{weather.main.temp_max}} degrees and a low of {{weather.main.temp_min}} degrees.</p>
+<p>The current is {{weather.main.humidity}}.</p>
+<p>The current is {{weather.visibility}}.</p>
+</section>

@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OverviewComponent } from './overview/overview.component';
 import { CitiesComponent } from './cities/cities.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './search/search.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
     HomepageComponent,
     NavbarComponent,
     OverviewComponent,
-    CitiesComponent
+    CitiesComponent,
+    SearchComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
