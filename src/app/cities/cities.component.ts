@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities';
 
+
 @Component({
   selector: 'app-cities',
   templateUrl: './cities.component.html',
@@ -10,12 +11,11 @@ import { CITIES } from '../cities';
 export class CitiesComponent implements OnInit {
   city: any;
   cityIndex: string = '';
-
+  searchText: string = '';
 // let's make the URL routes available to class 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
     this.route.paramMap.subscribe(params => {
       this.cityIndex = params.get('id') || '';
 

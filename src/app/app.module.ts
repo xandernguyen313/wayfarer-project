@@ -8,9 +8,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OverviewComponent } from './overview/overview.component';
 import { CitiesComponent } from './cities/cities.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SearchComponent } from './search/search.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     OverviewComponent,
     CitiesComponent,
-    SearchComponent,
     WeatherComponent
   ],
   imports: [
@@ -27,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    Ng2SearchPipeModule, 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
