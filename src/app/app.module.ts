@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     NavbarComponent,
     OverviewComponent,
     CitiesComponent,
-    WeatherComponent
+    WeatherComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
