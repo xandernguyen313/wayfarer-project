@@ -3,3 +3,7 @@ img {
     height: 500px;
     object-fit: cover;
 }
+
+.form-control {
+    width: 1000px;
+}

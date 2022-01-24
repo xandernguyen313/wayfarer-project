@@ -1,7 +1,7 @@
 
 <div class="row mb-2 justify-content-center">  
   <h2 class="text-center p-4">Welcome to {{city.name}}</h2>
-  <input [(ngModel)]="searchText" type="text" placeholder="search">
+  <input [(ngModel)]="searchText" class="form-control shadow mb-4" type="text" placeholder="Search by title or content">
   <p>{{searchText}}</p>
   <div *ngFor="let post of sortByLastModified | filter:searchText" class="col-6" style="width: 500px;">
     <div class="col-auto d-none d-lg-block">
