@@ -1,7 +1,7 @@
-import { state } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { CITIES } from '../cities';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -13,8 +13,9 @@ export class CitiesComponent implements OnInit {
   city: any;
   cityIndex: string = '';
   searchText: string = '';
+  weather: any;
 // let's make the URL routes available to class 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -24,12 +25,12 @@ export class CitiesComponent implements OnInit {
   
         return city.id === parseInt(this.cityIndex);
         
-
+    
 
       })
-
+      this.getWeatherDetails()
     })
-  
+ 
   
   }
 
@@ -42,5 +43,15 @@ export class CitiesComponent implements OnInit {
   redirectToPost(currentPost: any){
     this.router.navigate(['post'], {state: {currentPost: currentPost}});
   }
-}
+ getWeatherDetails() {
+    console.log(this.city.name)
+   this.http
+    .get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city.name}&appid=36567fd0102b929dc578b574dbc63eeb&&units=imperial`)
+    .subscribe(response => {
+      this.weather = response
+    }) 
+
+  }
+  }
+
 
