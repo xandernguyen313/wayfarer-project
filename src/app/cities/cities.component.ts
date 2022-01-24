@@ -32,11 +32,11 @@ export class CitiesComponent implements OnInit {
   
   }
 
+  get sortByLastModified() {
+    return this.city.posts.sort((a: any, b: any) => {
+      return <any>new Date(b.lastModified) - <any>new Date(a.lastModified);
+    })
+  }
+
 }
 
-
-// this.route.queryParams.subscribe(params => {
-//    this.name = params['name'];
-//     });
-// }
-// }
