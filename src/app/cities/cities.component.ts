@@ -57,7 +57,7 @@ export class CitiesComponent implements OnInit {
 
   }
   post() {
-    this.postArray.push({
+    this.city.posts.push({
       title: this.title,
       description: this.description,
     })
