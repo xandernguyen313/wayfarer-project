@@ -12,6 +12,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PostComponent } from './post/post.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PostComponent } from './post/post.component';
     OverviewComponent,
     CitiesComponent,
     WeatherComponent,
-    PostComponent
+    PostComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
