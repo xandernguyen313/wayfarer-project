@@ -14,6 +14,10 @@ export class CitiesComponent implements OnInit {
   cityIndex: string = '';
   searchText: string = '';
   weather: any;
+  title: any;
+  description: any;
+  postArray: any = [];
+
 // let's make the URL routes available to class 
   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
@@ -51,6 +55,12 @@ export class CitiesComponent implements OnInit {
       this.weather = response
     }) 
 
+  }
+  post() {
+    this.postArray.push({
+      title: this.title,
+      description: this.description,
+    })
   }
   }
 

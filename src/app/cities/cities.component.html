@@ -46,3 +46,25 @@
       </div>
     </div>
 </div>
+<section id="form" class="container shadow my-5">
+  <h2>Create New Post</h2>
+  <form action="">
+      <div class="form-group">
+          <label for="exampleFormControlInput1" class="py-2">Title</label>
+          <input name="title" [(ngModel)]="title" minlength="1"  maxlength="200" [ngModelOptions]="{standalone: true}" type="title" class="form-control" id="exampleFormControlInput1" placeholder="Title"> 
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlInput2" class="py-2">Description</label>
+          <textarea [(ngModel)]="description" [ngModelOptions]="{standalone: true}" class="form-control" aria-label="Description" rows="6" placeholder="Post Description"></textarea>
+           
+      </div>
+      <button (click)="post()" type="submit" class="btn btn-primary my-3" [disabled]="!title || !description" >Submit</button>
+  </form>
+
+</section>
+
+<div *ngFor="let post of postArray">
+<p>{{post.title}}</p>
+<p>{{post.description}}</p>
+
+
