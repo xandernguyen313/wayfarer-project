@@ -1,10 +1,10 @@
-   Project Wayfarer
+                                      Project Wayfarer
 
 A travel community for users to share city-specific tips ("posts" or "logs") about their favorite locations around the world.
  
 
  
-Resources:
+                           Resources:
 
 [User's Comments](https://www.youtube.com/watch?v=Vs4f-ys9qhY)
 
@@ -26,4 +26,4 @@ Resources:
 
 [Two way binding](https://stackoverflow.com/questions/46321558/how-do-i-disable-the-button-if-the-input-box-is-empty-and-enable-when-field-is-f/46322583)
 
-<img src="../../assets/image/wireframes.png">
+<img src="assets/image/wireframes.png">
